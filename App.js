@@ -15,10 +15,8 @@ import {
   Text,
   useColorScheme,
   View,
+  NativeModules,
 } from 'react-native';
-import {NativeModules} from 'react-native';
-
-console.log(NativeModules.Counter);
 
 import {
   Colors,
@@ -55,6 +53,8 @@ const Section = ({children, title}) => {
 };
 
 const App = () => {
+  console.log(NativeModules.Counter.increment());
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {

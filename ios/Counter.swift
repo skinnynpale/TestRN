@@ -6,12 +6,16 @@
 //
 
 import Foundation
+import NeatsyKit
 
 @objc(Counter)
 class Counter: NSObject {
-  @objc
-    func constantsToExport() -> [AnyHashable : Any]! {
-      return ["initialCount": 0]
+  
+  private var count = 0
+    @objc
+    func increment() {
+      count += 1
+      print("count is \(count)")
     }
 
 }
